@@ -64,10 +64,10 @@ function searchingInput(event) {
 function getCountriesNames(countries) {
   const countryElement = countries
     .map(country => {
-      return `<li  box-shadow: 10px 1px 8px 1px rgba(189, 189, 189, 0.97);'>
-         <p class="list-item"><span>
-          <img width="30px" height="30px"  src="${country.flags.svg}">
-                    </span> ${country.name.official}</p>
+      return `<li  class="list-element">
+         <p class="list-item">
+          <img class= "list-image"   src="${country.flags.svg}" alt="flag">
+                   <span>  ${country.name.official}</span></p>
           </li>`;
     })
     .join('');
@@ -77,18 +77,18 @@ function getCountriesNames(countries) {
 function getCountrieInfo(countries) {
   const countriesInfo = countries
     .map(country => {
-      return `<h1 style = ' box-shadow: 10px 1px 8px 1px rgba(189, 189, 189, 0.97);' class="country_name">
-      <span>
-          <img width="60px" height="40px"  src="${country.flags.svg}">
-                    </span> ${country.name.official}
+      return `<h1  class="countryinfo-header">
+   
+          <img class= "info-image" alt="flag" src="${country.flags.svg}">
+                       <span> ${country.name.official}</span>
                   </h1>
-    <p class="country_data"> <span class="country_data--title">Capital: </span> ${
+    <p class="countryinfo-paragraph"> <span class="countryinfo-span">Capital: </span> ${
       country.capital
     }</p>
-    <p class="country_data"> <span class="country_data--title">Population: </span> ${
+    <p class="countryinfo-paragraph"> <span class="countryinfo-span">Population: </span> ${
       country.population
     } </p>
-    <p class="country_data"> <span class="country_data--title">Languages: </span> ${Object.values(
+    <p class="countryinfo-paragraph"> <span class="countryinfo-span">Languages: </span> ${Object.values(
       country.languages
     )}</p>`;
     })
