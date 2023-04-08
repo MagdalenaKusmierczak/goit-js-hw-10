@@ -54,8 +54,8 @@ function searchingInput(event) {
         console.log(error);
       });
   } else {
-    infoElement.innerHTML = '';
-    listElement.innerHTML = '';
+    countryInfo.innerHTML = '';
+    countryList.innerHTML = '';
     return;
   }
 }
@@ -64,7 +64,7 @@ function searchingInput(event) {
 function getCountriesNames(countries) {
   const countryElement = countries
     .map(country => {
-      return `<li style = 'background-color:${getRandomHexColor()}; box-shadow: 10px 1px 8px 1px rgba(189, 189, 189, 0.97);'>
+      return `<li  box-shadow: 10px 1px 8px 1px rgba(189, 189, 189, 0.97);'>
          <p class="list-item"><span>
           <img width="30px" height="30px"  src="${country.flags.svg}">
                     </span> ${country.name.official}</p>
@@ -77,7 +77,7 @@ function getCountriesNames(countries) {
 function getCountrieInfo(countries) {
   const countriesInfo = countries
     .map(country => {
-      return `<h1 style = 'background-color:${getRandomHexColor()}; box-shadow: 10px 1px 8px 1px rgba(189, 189, 189, 0.97);' class="country_name">
+      return `<h1 style = ' box-shadow: 10px 1px 8px 1px rgba(189, 189, 189, 0.97);' class="country_name">
       <span>
           <img width="60px" height="40px"  src="${country.flags.svg}">
                     </span> ${country.name.official}
